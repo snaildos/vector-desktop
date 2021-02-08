@@ -10,11 +10,14 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "electron .",
-    "build": "electron-builder build --linux --win --publish never --x64",
-    "deploy": "electron-builder build --linux --win --publish always --x64"
+    "build": "electron-builder build --linux appimage --win --publish never",
+    "deploy": "electron-builder build --linux appimage --win --publish always"
   },
   "author": "SnailDOS",
   "license": "ISC",
+  "build": {
+    "remoteBuild": "false"
+  },
   "devDependencies": {
     "electron": "^5.0.1",
     "electron-builder": "^20.40.2"
